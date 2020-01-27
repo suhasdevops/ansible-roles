@@ -1,0 +1,5 @@
+- hosts: web
+  roles:
+     - tomcat
+  become: yes
+  become_method: sudo

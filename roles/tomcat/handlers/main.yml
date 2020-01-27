@@ -1,0 +1,8 @@
+---
+# handlers file for tomcat-ansible-role
+
+- name: restart tomcat
+  become: true
+  command: "sh {{ tomcat_install_path }}/apache-tomcat-{{ tomcat_version }}/bin/stutdown.sh"
+  command: "ll"
+  command: "sh {{ tomcat_install_path }}/apache-tomcat-{{ tomcat_version }}/bin/startup.sh"
