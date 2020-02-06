@@ -1,0 +1,4 @@
+---
+# vars file for java
+
+java_open_jdk_version_major: "{{ java_open_jdk_version | regex_search('^([0-9]{1,2})') }}"

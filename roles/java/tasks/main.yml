@@ -1,0 +1,7 @@
+---
+# tasks file for java
+
+- name: Java | Install OpenJDK implementation
+  include_tasks: install_openjdk.yml
+  tags:
+    - install
