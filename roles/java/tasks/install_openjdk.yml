@@ -64,6 +64,11 @@
   until: java_package_installed is succeeded
   register: java_package_installed
   when: ansible_os_family == 'RedHat'
+  
+- name: In addition if you are using the OpenJDK Headless package (at least on CentOS 7) you will need to install fontconfig
+  yum:
+    name: fontconfig
+    state: present
 
 - name: Java | Update Env
   alternatives:
