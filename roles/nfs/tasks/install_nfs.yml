@@ -1,0 +1,8 @@
+---
+
+# install nfs package
+- name: NFS | Install NFS, Redhat
+  yum:
+    name: nfs-utils
+    state: present
+    update_cache: yes

@@ -1,0 +1,36 @@
+---
+
+# Make sure NFS and related services are started and enabled
+- name: Start service rpcbind, in all cases
+  service:
+    name: rpcbind
+    state: started
+    enabled: yes
+
+- name: Start service nfs-server, in all cases
+  service:
+    name: nfs-server
+    state: started
+    enabled: yes
+
+- name: Start service nfs-lock, in all cases
+  service:
+    name: nfs-lock
+    state: started
+    enabled: yes
+
+- name: Start service nfs-idmap, in all cases
+  service:
+    name: nfs-idmap
+    state: started
+    enabled: yes
+
+#Set permissions to NFS-share path
+- name: Give read/write permissions to NFS-share path
+  shell: chmod -R 755 "{{nfs_share_path}}"
+
+#share the NFS directory over the network or to client
+
+- name: Share NFS directory to client machine
+  shell: echo "{{nfs_share_path}}      {{nfs_client_ip}}(rw,sync,no_root_squash,no_all_squash)" > /etc/exports
+

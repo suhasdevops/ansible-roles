@@ -1,0 +1,8 @@
+---
+# defaults file for nfs
+
+nfs_master_ip: 192.168.33.29
+nfs_client_ip: 192.168.33.30
+
+nfs_share_path: /var/lib/jenkins/jobs/
+

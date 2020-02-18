@@ -1,0 +1,5 @@
+---
+
+#configure nfs-client
+- name: Mount the NFS directory to client machine
+  script: config_nfs_client.sh

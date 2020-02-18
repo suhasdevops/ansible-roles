@@ -1,0 +1,25 @@
+---
+# tasks file for nfs
+
+# install network file system
+- name: Install NFS
+  include_tasks: install_nfs.yml
+
+
+### 
+### at a time only perform configuration of NFS-Master and comment the task for NFS-Client
+###               OR
+### while performing NFS-Client configuration comment the task for NFS-Master
+###
+
+## comment below task while doing NFS-Client configuration
+
+#- name: Configure NFS Master
+#  include_tasks: config_nfs_master.yml
+
+
+## comment below task while doing NFS-Master configuration
+
+- name: Configure NFS Client
+  include_tasks: config_nfs_client.yml
+
