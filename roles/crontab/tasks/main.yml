@@ -1,0 +1,19 @@
+---
+# tasks file for crontab
+
+- name: Install a yum package in Ansible
+  yum:
+    name: crontabs
+    state: present
+
+- name: 'Ensure an old job is no longer present. Removes any job that is prefixed by "#Ansible: an old job" from the crontab'
+  cron:
+    name: "an old job"
+    state: absent
+
+- name: create a cron in node systems to restart the Jenkins
+  cron:
+    name: "Restart Jenkins"
+    user: "root"
+    minute: "0,5"
+    job: "systemctl restart jenkins"
