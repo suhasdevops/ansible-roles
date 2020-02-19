@@ -1,0 +1,6 @@
+---
+# handlers file for haproxy
+
+- name: restart haproxy
+  become: yes
+  shell: systemctl restart haproxy

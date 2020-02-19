@@ -1,0 +1,11 @@
+---
+# defaults file for haproxy
+
+#server IPs whichever adding in haproxy
+server1: 192.168.33.29
+server2: 192.168.33.30
+
+#haproxy config file template
+haproxy_template_cofig: "haproxy.cfg.j2"
+
+
