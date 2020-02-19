@@ -10,3 +10,5 @@
 5> nfs
 
 6> crontab
+
+7> haproxy
