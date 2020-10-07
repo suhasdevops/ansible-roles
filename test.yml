@@ -1,5 +1,5 @@
-- hosts: web
+- hosts: redhat
   roles:
-     - tomcat
+     - ansible-hardening
   become: yes
   become_method: sudo
