@@ -1,5 +1,0 @@
-- hosts: redhat
-  roles:
-     - ansible-hardening
-  become: yes
-  become_method: sudo
